@@ -9,12 +9,13 @@ using System.Threading;
 using System.Media;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+// Daniel Bean Decemeber 2024 this is  a animation of a skele the skeleton Ascending to the sky 
 namespace WindowsFormsApp5
 {
     
     public partial class Form1 : Form
     {
+        // creates a lot of variables, pens and brushs
         int leftFeetUp;
         int leftFeetLeft;
         int hipUp;
@@ -117,7 +118,7 @@ namespace WindowsFormsApp5
         }
             private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-
+            //creates a lot of variables for the skele to ascend
             int i = 15;
             int laugh = 0;
              leftFeetUp = 300;
@@ -135,6 +136,7 @@ namespace WindowsFormsApp5
             eye = 180;
             while (i >=0)
             {
+                // this create a useless pen now it also check to see if the skeleton is off screen
                 i--;
                 laugh++;
                 Thread.Sleep(1000);
@@ -149,6 +151,7 @@ namespace WindowsFormsApp5
                 {
                     Halloween();
                 }
+                //this makes the laugh now play thoughout the code 
                 if (laugh == 5)
                 {
                     laugh = 0;
@@ -167,6 +170,7 @@ namespace WindowsFormsApp5
         }
         public void Halloween()
         {
+            // draws the halloween message 
             Font drawFont = new Font("Arial", 24, FontStyle.Bold);
             SolidBrush drawBrush = new SolidBrush(Color.Yellow);
 
@@ -178,6 +182,7 @@ namespace WindowsFormsApp5
         }
         public void Minus()
         {
+            // minus 25 from all the height so it slowly goes up
              leftFeetUp = leftFeetUp - 25;
              leftFeetLeft =  leftFeetLeft - 25;
             hipUp = hipUp - 25;
