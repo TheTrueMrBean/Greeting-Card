@@ -33,6 +33,7 @@ namespace WindowsFormsApp5
         Graphics g;
 
         SoundPlayer Laugh = new SoundPlayer(Properties.Resources.Laugh);
+        SoundPlayer Bones = new SoundPlayer(Properties.Resources.bones);
 
         Pen yellowPen = new Pen(Color.Yellow, 10);
         Pen blackPen = new Pen(Color.Black, 10);
@@ -120,7 +121,7 @@ namespace WindowsFormsApp5
         {
             //creates a lot of variables for the skele to ascend
             int i = 15;
-            int laugh = 0;
+            int bones = 0;
              leftFeetUp = 300;
              leftFeetLeft = 370;
             hipUp = 300;
@@ -138,7 +139,7 @@ namespace WindowsFormsApp5
             {
                 // this create a useless pen now it also check to see if the skeleton is off screen
                 i--;
-                laugh++;
+                bones++;
                 Thread.Sleep(1000);
                 scold = new Pen(Color.DarkGray, 10);
                 Clear();
@@ -152,10 +153,10 @@ namespace WindowsFormsApp5
                     Halloween();
                 }
                 //this makes the laugh now play thoughout the code 
-                if (laugh == 5)
+                if (bones == 5)
                 {
-                    laugh = 0;
-                    Laugh.Play();
+                    bones = 0;
+                    Bones.Play();
                 }
 
             }
